@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Amal &amp; Marsal · Engagement</title>
-<meta name="description" content="You are invited to the engagement party of Amal &amp; Marsal. Sunday, November 8, 2026 at 4:00 PM, Uno Restaurant, Akko.">
+<title>Amal &amp; Marsel · Engagement</title>
+<meta name="description" content="You are invited to the engagement party of Amal &amp; Marsel. Sunday, November 8, 2026 at 4:00 PM, Uno Restaurant, Akko.">
 <meta name="theme-color" content="#d6bca0">
-<meta property="og:title" content="Amal &amp; Marsal · Engagement">
+<meta property="og:title" content="Amal &amp; Marsel · Engagement">
 <meta property="og:description" content="Sunday, November 8, 2026 · 4:00 PM · Uno Restaurant, Akko">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23b89257'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-style='italic' font-size='26' text-anchor='middle' fill='%23f1e4d2'%3EA%26M%3C/text%3E%3C/svg%3E">
 
@@ -540,7 +540,7 @@
     <div class="env-text">
       <div class="kicker">THE ENGAGEMENT OF</div>
       <div class="mono foil">A<span class="amp">&amp;</span>M</div>
-      <div class="names">Amal &amp; Marsal</div>
+      <div class="names">Amal &amp; Marsel</div>
       <div class="rule"></div>
       <div class="date">08 · 11 · 2026</div>
     </div>
@@ -562,7 +562,7 @@
       <div class="kicker h-in" style="--d:.5s">TOGETHER WITH THEIR FAMILIES</div>
       <div class="name emboss h-in" style="--d:.9s">Amal</div>
       <div class="amp foil deep h-in" style="--d:1.3s">&amp;</div>
-      <div class="name emboss h-in" style="--d:1.6s">Marsal</div>
+      <div class="name emboss h-in" style="--d:1.6s">Marsel</div>
       <div class="tagline" id="tagline" aria-label="are engaged">are engaged</div>
       <svg class="flourish h-in" style="--d:3s" aria-hidden="true"><use href="#flourish"/></svg>
       <p class="quote h-in" style="--d:3.3s">“Two hearts, one promise, and the beginning of a beautiful forever.”</p>
@@ -601,7 +601,7 @@
 
         <p class="sec-kicker" style="color:var(--ink)">Kindly join us for</p>
         <h2 class="sec-title foil deep mt-1">Save the Date</h2>
-        <p class="text-center font-serif italic text-lg mt-2" style="color:var(--ink)">the engagement party of Amal &amp; Marsal</p>
+        <p class="text-center font-serif italic text-lg mt-2" style="color:var(--ink)">the engagement party of Amal &amp; Marsel</p>
 
         <div class="date-grid">
           <div class="side">SUNDAY</div>
@@ -675,7 +675,7 @@
     <p class="sec-kicker reveal mt-6" style="color:var(--ink)">Sealed with love</p>
     <p class="font-serif italic reveal mt-4" style="--d:.1s;font-size:clamp(1.35rem,6.4cqw,1.8rem);line-height:1.35;color:var(--ink-deep)">We can’t wait to celebrate<br>this moment with you</p>
     <svg class="divider reveal" style="--d:.2s" aria-hidden="true"><use href="#flourish"/></svg>
-    <div class="mono foil deep reveal" style="--d:.3s">Amal <span class="amp">&amp;</span> Marsal</div>
+    <div class="mono foil deep reveal" style="--d:.3s">Amal <span class="amp">&amp;</span> Marsel</div>
     <footer class="reveal" style="--d:.5s">08 · 11 · 2026 · AKKO</footer>
   </section>
 </main>
@@ -683,9 +683,9 @@
 <script>
 (() => {
   const EVENT = {
-    title: 'Engagement Party of Amal & Marsal',
+    title: 'Engagement Party of Amal & Marsel',
     venue: 'Uno Restaurant, Akko',
-    details: 'Join us to celebrate the engagement of Amal & Marsal.',
+    details: 'Join us to celebrate the engagement of Amal & Marsel.',
     start: new Date('2026-11-08T16:00:00+02:00'),
     end: new Date('2026-11-08T20:00:00+02:00'),
   };
@@ -707,20 +707,20 @@
   $('#icsBtn').addEventListener('click', () => {
     const esc = (s) => s.replace(/([,;\\])/g, '\\$1');
     const ics = [
-      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Amal & Marsal//Engagement//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Amal & Marsel//Engagement//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
       'BEGIN:VEVENT',
-      'UID:amal-marsal-engagement-20261108@invite',
+      'UID:amal-marsel-engagement-20261108@invite',
       `DTSTAMP:${utc(new Date())}`,
       `DTSTART:${utc(EVENT.start)}`,
       `DTEND:${utc(EVENT.end)}`,
       `SUMMARY:${esc(EVENT.title)}`,
       `LOCATION:${esc(EVENT.venue)}`,
       `DESCRIPTION:${esc(EVENT.details)}`,
-      'BEGIN:VALARM', 'TRIGGER:-P1D', 'ACTION:DISPLAY', 'DESCRIPTION:Engagement Party of Amal & Marsal tomorrow', 'END:VALARM',
+      'BEGIN:VALARM', 'TRIGGER:-P1D', 'ACTION:DISPLAY', 'DESCRIPTION:Engagement Party of Amal & Marsel tomorrow', 'END:VALARM',
       'END:VEVENT', 'END:VCALENDAR',
     ].join('\r\n');
     const url = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
-    const a = Object.assign(document.createElement('a'), { href: url, download: 'amal-marsal-engagement.ics' });
+    const a = Object.assign(document.createElement('a'), { href: url, download: 'amal-marsel-engagement.ics' });
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 2000);
     toggleCal(false);
