@@ -400,8 +400,30 @@
   .reveal.zoom { transform: scale(.94); }
   .reveal.in { opacity: 1; transform: none; }
 
-  /* floating petals */
+  /* floating petals + sound toggle */
   #petals { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 60; }
+  #sound {
+    position: fixed; z-index: 70;
+    right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom));
+    width: 48px; height: 48px; border-radius: 50%;
+    display: grid; place-items: center;
+    color: var(--cream-lt); font-size: 1rem;
+    background: linear-gradient(135deg, #a8834a, #c9a56a 45%, #9a7740);
+    border: 0; cursor: pointer;
+    box-shadow: inset 0 1px 0 rgba(255, 240, 210, .6), 0 0 0 3px rgba(241, 228, 210, .65), 0 10px 22px -8px rgba(40, 30, 20, .7);
+    opacity: 0; transform: scale(.6); pointer-events: none;
+    transition: opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1);
+  }
+  body.opened #sound { opacity: 1; transform: none; pointer-events: auto; transition-delay: 2.5s; }
+  #sound.playing::after {
+    content: ""; position: absolute; inset: -3px; border-radius: 50%;
+    border: 1px solid rgba(217, 188, 133, .9);
+    animation: ring 2.4s ease-out infinite;
+  }
+  @media (min-width: 900px) {
+    #sound { right: calc(50% - 15rem + 1rem); }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-delay: 0s !important; transition-delay: 0s !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
     .reveal { transition: opacity .6s ease; transform: none !important; }
@@ -496,6 +518,7 @@
 </div>
 
 <canvas id="petals" aria-hidden="true"></canvas>
+<button id="sound" aria-label="أوقِفِ الموسيقى" title="الموسيقى"><i class="fa-solid fa-music"></i></button>
 
 <main class="col">
 
@@ -773,6 +796,41 @@
     if (parts.length || ambient) requestAnimationFrame(frame); else { running = false; ctx.clearRect(0, 0, W, H); }
   }
 
+  /* ───── Music: A Thousand Years (violin cover) ───── */
+  const music = {
+    el: Object.assign(new Audio('../a-thousand-years.m4a'), { loop: true, preload: 'auto', volume: 0 }),
+    on: false, raf: 0,
+    fade(to, ms, done) {
+      cancelAnimationFrame(this.raf);
+      const from = this.el.volume, t0 = performance.now();
+      const step = (now) => {
+        const k = Math.min(1, (now - t0) / ms);
+        this.el.volume = from + (to - from) * k;
+        if (k < 1) this.raf = requestAnimationFrame(step); else if (done) done();
+      };
+      this.raf = requestAnimationFrame(step);
+    },
+    start() {
+      this.on = true;
+      this.el.play().catch(() => {});
+      this.fade(.8, 2500);
+    },
+    stop() {
+      this.on = false;
+      this.fade(0, 600, () => { if (!this.on) this.el.pause(); });
+    },
+  };
+  const soundBtn = $('#sound');
+  function syncSound() {
+    soundBtn.classList.toggle('playing', music.on);
+    soundBtn.innerHTML = music.on ? '<i class="fa-solid fa-music"></i>' : '<i class="fa-solid fa-volume-xmark"></i>';
+    soundBtn.setAttribute('aria-label', music.on ? 'أوقِفِ الموسيقى' : 'شغِّلِ الموسيقى');
+  }
+  soundBtn.addEventListener('click', () => { music.on ? music.stop() : music.start(); syncSound(); });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) music.el.pause(); else if (music.on) music.el.play().catch(() => {});
+  });
+
   /* ───── Opening the envelope ───── */
   const splash = $('#splash'), stage = $('#stage');
   let opened = false;
@@ -794,6 +852,7 @@
   function open() {
     if (opened) return;
     opened = true;
+    music.start(); syncSound();
     splash.classList.add('opening');
     setTimeout(sparkle, reduceMotion ? 0 : 420);
     setTimeout(() => {
