@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>أمل ومرسيل · خطوبة</title>
-<meta name="description" content="إلى أهل الودّ والندى: أنتم مدعوّون إلى حفل خطوبة أمل ومرسيل، الأحد ٨ تشرين الثاني ٢٠٢٦، الرابعة عصرًا، مطعم أونو، عكّا.">
+<meta name="description" content="بكل حب يسعدنا حضوركم إلى حفل خطوبة أمل ومرسيل، الأحد ٨ تشرين الثاني ٢٠٢٦، الساعة ٣:٣٠ عصرًا، مطعم أونو، عكّا.">
 <meta name="theme-color" content="#d6bca0">
 <meta property="og:title" content="أمل ومرسيل · خطوبة">
-<meta property="og:description" content="الأحد ٨ تشرين الثاني ٢٠٢٦ · الرابعة عصرًا · مطعم أونو، عكّا">
+<meta property="og:description" content="الأحد ٨ تشرين الثاني ٢٠٢٦ · ٣:٣٠ عصرًا · مطعم أونو، عكّا">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23b89257'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-style='italic' font-size='26' text-anchor='middle' fill='%23f1e4d2'%3EA%26M%3C/text%3E%3C/svg%3E">
 
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
@@ -153,17 +153,6 @@
   }
   .seal-btn:focus-visible { outline: 2px dashed var(--gold-lt); outline-offset: 6px; }
 
-  .env-text {
-    position: absolute; left: max(3cqw, calc((100cqw - 100vw) / 2 + 4vw)); width: 62cqw; top: 11%;
-    text-align: center; pointer-events: none;
-  }
-  .env-text .kicker { font-family: var(--caps); font-size: 2.9cqw; letter-spacing: .26em; color: var(--ink-deep); opacity: .85; }
-  .env-text .mono { font-family: var(--script); font-size: 23cqw; line-height: 1.05; margin: 1cqw 0 0; }
-  .env-text .mono .amp { font-family: var(--serif); font-style: italic; font-size: .5em; vertical-align: .3em; margin: 0 .22em 0 .14em; }
-  .env-text .names { font-family: var(--serif); font-style: italic; font-size: 6cqw; color: var(--ink-deep); margin-top: -1cqw; }
-  .env-text .date { font-family: var(--caps); font-size: 3.2cqw; letter-spacing: .4em; color: var(--ink); margin-top: 2cqw; }
-  .env-text .rule { width: 40%; height: 1px; margin: 3cqw auto 0; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-
   .tap-hint {
     position: absolute; left: 35.6%; top: 59.8%;
     transform: translateX(-50%);
@@ -172,11 +161,10 @@
     text-shadow: 0 0 10px rgba(240, 225, 205, .9);
     animation: float 3s ease-in-out infinite;
   }
-  .tap-hint i { font-size: .8em; margin-right: .35em; color: var(--gold-dk); }
   @keyframes float { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -6px); } }
 
   /* opening sequence */
-  #splash.opening .seal-btn, #splash.opening .tap-hint, #splash.opening .env-text { opacity: 0; transition: opacity .4s ease; pointer-events: none; }
+  #splash.opening .seal-btn, #splash.opening .tap-hint { opacity: 0; transition: opacity .4s ease; pointer-events: none; }
   #splash.opening .seal-wrap { animation: sealLift 1.5s cubic-bezier(.3,.7,.2,1) forwards; }
   @keyframes sealLift {
     0% { transform: none; filter: drop-shadow(0 0 0 rgba(40,25,10,0)); opacity: 1; }
@@ -248,8 +236,6 @@
   .hero .kicker { font-family: var(--caps); font-size: 2.9cqw; letter-spacing: .26em; white-space: nowrap; color: var(--sepia); }
   .hero .name { font-family: var(--script); font-size: 21cqw; line-height: 1; }
   .hero .amp { font-family: var(--serif); font-style: italic; font-size: 13cqw; line-height: .9; margin: -1cqw 0 0; }
-  .hero .tagline { font-family: var(--serif); font-style: italic; font-size: 7.2cqw; color: var(--ink); letter-spacing: .02em; margin-top: 2.5cqw; min-height: 1.2em; }
-  .hero .quote { font-family: var(--serif); font-style: italic; font-size: 4.5cqw; line-height: 1.45; color: var(--ink); max-width: 32ch; margin-top: 2cqw; }
   .hero .date { font-family: var(--caps); font-size: 4.2cqw; letter-spacing: .38em; color: var(--ink-deep); margin-top: 4cqw; }
   .hero .date span { color: var(--sage-deep); }
   .flourish { display: block; width: 52cqw; max-width: 15rem; height: auto; aspect-ratio: 10 / 1; color: var(--sepia); margin: 3cqw auto 0; }
@@ -409,69 +395,13 @@
   .nav-row { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin-top: 1.4rem; }
   .nav-row .btn { padding-left: .8em; padding-right: .8em; letter-spacing: .16em; }
 
-  /* closing */
-  .closing {
-    position: relative; overflow: hidden;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    text-align: center; padding: 5.5rem 9% 4rem;
-  }
-  .closing .roses {
-    position: absolute; top: 0; right: 0; width: 75%; aspect-ratio: 1;
-    background-size: 240% auto; background-position: 100% 38%;
-    -webkit-mask-image: radial-gradient(circle at 85% 20%, #000 15%, transparent 68%);
-    mask-image: radial-gradient(circle at 85% 20%, #000 15%, transparent 68%);
-    opacity: .55; pointer-events: none;
-  }
-  .closing .leaves {
-    position: absolute; bottom: 0; left: 0; width: 70%; aspect-ratio: 1;
-    background-size: 220% auto; background-position: 30% 100%;
-    -webkit-mask-image: radial-gradient(circle at 25% 85%, #000 10%, transparent 65%);
-    mask-image: radial-gradient(circle at 25% 85%, #000 10%, transparent 65%);
-    opacity: .5; pointer-events: none;
-  }
-  .closing > :not(.roses):not(.leaves) { position: relative; }
-  .closing .mono { font-family: var(--script); font-size: 13cqw; line-height: 1.15; }
-  .closing .mono .amp { font-family: var(--serif); font-style: italic; font-size: .6em; margin: 0 .1em; }
-  .wax {
-    width: 26cqw; max-width: 8rem; aspect-ratio: 167 / 154;
-    filter: drop-shadow(0 8px 10px rgba(60, 40, 20, .35));
-  }
-  .wax > div {
-    width: 100%; height: 100%;
-    background-size: 403% 781%; background-position: 30.9% 51.95%;
-    clip-path: ellipse(48% 47% at 50% 50%);
-  }
-  .closing footer { font-family: var(--caps); font-size: .68rem; letter-spacing: .4em; color: var(--ink); margin-top: 2rem; }
-
   /* scroll reveals */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
   .reveal.zoom { transform: scale(.94); }
   .reveal.in { opacity: 1; transform: none; }
 
-  /* floating petals + sound toggle */
+  /* floating petals */
   #petals { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 60; }
-  #sound {
-    position: fixed; z-index: 70;
-    right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom));
-    width: 48px; height: 48px; border-radius: 50%;
-    display: grid; place-items: center;
-    color: var(--cream-lt); font-size: 1rem;
-    background: linear-gradient(135deg, #a8834a, #c9a56a 45%, #9a7740);
-    border: 0; cursor: pointer;
-    box-shadow: inset 0 1px 0 rgba(255, 240, 210, .6), 0 0 0 3px rgba(241, 228, 210, .65), 0 10px 22px -8px rgba(40, 30, 20, .7);
-    opacity: 0; transform: scale(.6); pointer-events: none;
-    transition: opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1);
-  }
-  body.opened #sound { opacity: 1; transform: none; pointer-events: auto; transition-delay: 2.5s; }
-  #sound.playing::after {
-    content: ""; position: absolute; inset: -3px; border-radius: 50%;
-    border: 1px solid rgba(217, 188, 133, .9);
-    animation: ring 2.4s ease-out infinite;
-  }
-  @media (min-width: 900px) {
-    #sound { right: calc(50% - 15rem + 1rem); }
-  }
-
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-delay: 0s !important; transition-delay: 0s !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
     .reveal { transition: opacity .6s ease; transform: none !important; }
@@ -487,22 +417,12 @@
     --caps: "Reem Kufi", "Amiri", sans-serif;
   }
   html[lang="ar"] * { letter-spacing: 0 !important; font-style: normal !important; }
-  .env-text .kicker { font-size: 4.2cqw; font-weight: 500; }
-  .env-text .mono { font-size: 21cqw; line-height: 1.35; font-weight: 700; }
-  .env-text .mono .amp { font-size: .55em; vertical-align: .15em; margin: 0 .2em; }
-  .env-text .names { font-size: 7cqw; margin-top: -2cqw; font-weight: 700; }
-  .env-text .date, .hero .date, .closing footer { word-spacing: .2em; }
-  .env-text .date { font-size: 4.2cqw; }
   .tap-hint { font-size: 5.4cqw; font-weight: 700; }
-  .tap-hint i { margin-right: 0; margin-left: .4em; }
   .hero .kicker { font-size: 4cqw; font-weight: 500; }
   .hero .name { font-size: 20cqw; line-height: 1.3; font-weight: 700; }
   .hero .amp { font-size: 12cqw; line-height: 1; margin: -3cqw 0 -2cqw; font-weight: 700; }
-  .hero .tagline { font-size: 8cqw; font-weight: 700; margin-top: 1cqw; }
-  .hero .quote { font-size: 5cqw; line-height: 1.9; max-width: none; margin-top: 3cqw; }
-  .hero .quote span, .verse span { display: block; white-space: nowrap; }
-  .hero .quote span + span, .verse span + span { padding-right: 9cqw; }
-  .hero .date { font-size: 5.2cqw; }
+  .hero .date { font-size: 5.2cqw; word-spacing: .2em; }
+  .hero .invite-text { font-family: var(--serif); font-size: 4.8cqw; line-height: 1.8; font-weight: 500; color: var(--ink-deep); margin-bottom: 1cqw; }
   .scroll-cue { font-size: 3.2cqw; }
   .sec-title { line-height: 1.6; font-weight: 700; }
   .sec-kicker { font-size: .95rem; }
@@ -512,10 +432,6 @@
   .date-grid .day { font-weight: 700; font-size: 4.4rem; line-height: 1.15; }
   .btn { font-size: .95rem; font-weight: 500; }
   .cal-menu a, .cal-menu button { text-align: right; font-size: 1.05rem; }
-  .verse { font-family: var(--serif); font-size: clamp(1.2rem, 5.4cqw, 1.5rem); line-height: 2; color: var(--ink-deep); }
-  .closing .mono { font-size: 14cqw; line-height: 1.5; font-weight: 700; }
-  .closing .mono .amp { font-size: .7em; }
-  .closing footer { font-size: .85rem; }
 </style>
 </head>
 <body class="locked">
@@ -574,21 +490,12 @@
     <div class="half r img-cover"></div>
     <div class="seal-wrap"><div class="seal-lift img-cover"></div></div>
 
-    <div class="env-text">
-      <div class="kicker">إلى أهلِ الوُدِّ والنَّدى</div>
-      <div class="mono foil">أ<span class="amp">و</span>م</div>
-      <div class="names">أمل ومرسيل</div>
-      <div class="rule"></div>
-      <div class="date">الأحد ٨ تشرين الثاني ٢٠٢٦</div>
-    </div>
-
-    <button class="seal-btn" id="sealBtn" aria-label="افضُضِ الختمَ وافتحِ الدعوة"></button>
-    <div class="tap-hint"><i class="fa-solid fa-hand-pointer"></i>اُفضُضِ الخَتْم</div>
+    <button class="seal-btn" id="sealBtn" aria-label="اضغط هنا لفتح الدعوة"></button>
+    <div class="tap-hint">اضغط هنا</div>
   </div>
 </div>
 
 <canvas id="petals" aria-hidden="true"></canvas>
-<button id="sound" aria-label="أوقِفِ الموسيقى" title="الموسيقى"><i class="fa-solid fa-music"></i></button>
 
 <main class="col">
 
@@ -596,17 +503,12 @@
   <header class="hero" id="top">
     <div class="hero-bg img-inside absolute inset-0" style="background-size:100% 100%"></div>
     <div class="hero-inner">
-      <div class="kicker h-in" style="--d:.5s">بِرِضا الأهلِ وبَرَكةِ العَشيرة</div>
+      <p class="invite-text h-in" style="--d:.4s">بمشاعر مليئة بالفرح والسعادة ولأن الفرحة لا تكتمل إلا برؤيتكم<br>يسرّنا دعوتكم إلى حفل خطوبتنا</p>
       <div class="name emboss h-in" style="--d:.9s">أمَل</div>
-      <div class="amp foil deep h-in" style="--d:1.3s">وَ</div>
+      <div class="amp foil deep h-in" style="--d:1.3s">&amp;</div>
       <div class="name emboss h-in" style="--d:1.6s">مَرسيل</div>
-      <div class="tagline" id="tagline" aria-label="تَعاهَدا على الهوى">تَعاهَدا على الهوى</div>
-      <svg class="flourish h-in" style="--d:3s" aria-hidden="true"><use href="#flourish"/></svg>
-      <p class="quote h-in" style="--d:3.3s">
-        <span>قِفا نَفرَحا بالوَصلِ لا بالمَنازِلِ</span>
-        <span>وَقَد أشرَقَ البَدرانِ في خَيرِ مَحفِلِ</span>
-      </p>
-      <div class="date h-in" style="--d:3.7s">٨ <span>تشرين الثاني</span> ٢٠٢٦</div>
+      <svg class="flourish h-in" style="--d:2.1s" aria-hidden="true"><use href="#flourish"/></svg>
+      <div class="date h-in" style="--d:2.4s">٨ <span>تشرين الثاني</span> ٢٠٢٦</div>
     </div>
     <a href="#countdown" class="scroll-cue" aria-label="انزل إلى العدّ التنازلي">تابِعوا<i class="fa-solid fa-chevron-down"></i></a>
   </header>
@@ -615,8 +517,7 @@
 
     <!-- Countdown -->
     <section class="block" id="countdown">
-      <p class="sec-kicker reveal">حتّى يَحينَ اللِّقاء</p>
-      <h2 class="sec-title emboss reveal" style="--d:.1s">ليالٍ تُعَدّ</h2>
+      <h2 class="sec-title emboss reveal" style="--d:.1s">تَبَقّى مِنَ الوَقت</h2>
       <div class="count" id="count">
         <div class="tile reveal zoom" style="--d:.15s"><span class="num foil deep" data-unit="d">٠٠</span><span class="lbl">أيّام</span></div>
         <div class="tile reveal zoom" style="--d:.25s"><span class="num foil deep" data-unit="h">٠٠</span><span class="lbl">ساعات</span></div>
@@ -639,29 +540,30 @@
         <svg class="corner bl" aria-hidden="true"><use href="#corner"/></svg>
         <svg class="corner br" aria-hidden="true"><use href="#corner"/></svg>
 
-        <p class="sec-kicker" style="color:var(--ink)">يَشرُفُنا أن تَشهَدوا</p>
-        <h2 class="sec-title foil deep mt-1">يومٌ مَشهود</h2>
-        <p class="text-center font-serif text-lg mt-2 leading-loose" style="color:var(--ink)">في خِطبةِ أمل ومرسيل،<br>يومَ يُعقَدُ الوَعدُ ويَطيبُ المآل</p>
-
         <div class="date-grid">
           <div class="side">الأحد</div>
           <div class="day">٨</div>
-          <div class="side">٤&nbsp; عصرًا</div>
+          <div class="side">٣:٣٠&nbsp; عصرًا</div>
         </div>
         <p class="text-center font-caps text-base" style="color:var(--ink-deep);word-spacing:.3em">تشرين الثاني ٢٠٢٦</p>
 
         <svg class="divider" aria-hidden="true"><use href="#flourish"/></svg>
 
-        <div class="grid grid-cols-2 gap-3 text-center">
+        <div class="grid grid-cols-3 gap-3 text-center">
           <div>
             <i class="fa-regular fa-calendar text-lg" style="color:var(--gold-dk)"></i>
+            <p class="font-caps text-sm mt-2" style="color:var(--ink)">التاريخ</p>
+            <p class="font-serif text-lg leading-relaxed mt-1">٨ تشرين الثاني<br>٢٠٢٦</p>
+          </div>
+          <div style="border-inline-start:1px solid rgba(184,146,87,.5)">
+            <i class="fa-regular fa-sun text-lg" style="color:var(--gold-dk)"></i>
             <p class="font-caps text-sm mt-2" style="color:var(--ink)">اليوم</p>
-            <p class="font-serif text-lg leading-relaxed mt-1">الأحد، الثامن من<br>تشرين الثاني ٢٠٢٦</p>
+            <p class="font-serif text-lg leading-relaxed mt-1">الأحد</p>
           </div>
           <div style="border-inline-start:1px solid rgba(184,146,87,.5)">
             <i class="fa-regular fa-clock text-lg" style="color:var(--gold-dk)"></i>
-            <p class="font-caps text-sm mt-2" style="color:var(--ink)">الموعد</p>
-            <p class="font-serif text-lg leading-relaxed mt-1">الرابعةُ عصرًا<br>حينَ تَميلُ الشّمس</p>
+            <p class="font-caps text-sm mt-2" style="color:var(--ink)">الساعة</p>
+            <p class="font-serif text-lg leading-relaxed mt-1">٣:٣٠ عصرًا</p>
           </div>
         </div>
 
@@ -682,7 +584,6 @@
     <!-- Venue -->
     <section class="block" id="venue">
       <p class="sec-kicker reveal">حيثُ نَحُطُّ الرِّحال</p>
-      <h2 class="sec-title emboss reveal" style="--d:.1s">دارُ اللِّقاء</h2>
 
       <div class="card reveal mt-6" style="--d:.15s">
         <svg class="corner tl" aria-hidden="true"><use href="#corner"/></svg>
@@ -690,10 +591,8 @@
         <svg class="corner bl" aria-hidden="true"><use href="#corner"/></svg>
         <svg class="corner br" aria-hidden="true"><use href="#corner"/></svg>
 
-        <div class="pin"><i class="fa-solid fa-location-dot"></i></div>
-        <h3 class="text-center font-script mt-4 foil deep" style="font-size:clamp(2.8rem,14cqw,3.8rem);line-height:1.5;font-weight:700">مطعم أونو</h3>
-        <p class="text-center font-caps text-base" style="color:var(--ink);word-spacing:.3em">عكّا، عروسُ البحر</p>
-        <p class="text-center font-serif text-lg mt-3 leading-loose" style="color:var(--ink)">حيثُ يُعانِقُ السّورُ البَحر،<br>ويَسهَرُ على المَوجِ القَمَر</p>
+        <p class="text-center font-caps text-base" style="color:var(--ink);word-spacing:.3em">الموقع</p>
+        <h3 class="text-center font-script foil deep" style="font-size:clamp(2.8rem,14cqw,3.8rem);line-height:1.5;font-weight:700">مطعم أونو، عكّا</h3>
 
         <div class="map-frame">
           <iframe title="خريطة مطعم أونو، عكّا" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
@@ -708,20 +607,6 @@
     </section>
   </div>
 
-  <!-- Closing -->
-  <section class="closing paper-parch">
-    <div class="roses img-cover" aria-hidden="true"></div>
-    <div class="leaves img-cover" aria-hidden="true"></div>
-    <div class="wax reveal zoom" aria-hidden="true"><div class="img-cover"></div></div>
-    <p class="sec-kicker reveal mt-6" style="color:var(--ink)">مَختومٌ بالمحبّة</p>
-    <p class="verse reveal mt-4" style="--d:.1s">
-      <span>فَيا قَومَنا حُلّوا بِنا خَيرَ مَنزِلٍ</span>
-      <span>فَإنَّ اللَّيالي بِالمَسَرّاتِ تَنجَلي</span>
-    </p>
-    <svg class="divider reveal" style="--d:.2s" aria-hidden="true"><use href="#flourish"/></svg>
-    <div class="mono foil deep reveal" style="--d:.3s">أمل <span class="amp">و</span> مرسيل</div>
-    <footer class="reveal" style="--d:.5s">٨ تشرين الثاني ٢٠٢٦، عكّا</footer>
-  </section>
 </main>
 
 <script>
@@ -731,8 +616,8 @@
     venue: 'مطعم أونو، عكّا',
     mapQuery: 'Uno Restaurant, Akko',
     details: 'حيّاكم الله، يشرّفنا حضوركم حفل خطوبة أمل ومرسيل.',
-    start: new Date('2026-11-08T16:00:00+02:00'),
-    end: new Date('2026-11-08T20:00:00+02:00'),
+    start: new Date('2026-11-08T15:30:00+02:00'),
+    end: new Date('2026-11-08T19:30:00+02:00'),
   };
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const $ = (s) => document.querySelector(s);
@@ -800,13 +685,6 @@
     setTimeout(tick, 1000 - (Date.now() % 1000));
   }
   tick();
-
-  /* ───── Tagline letters ───── */
-  const tagline = $('#tagline');
-  // Arabic letters must stay joined, so the tagline reveals word by word
-  tagline.innerHTML = tagline.textContent.trim().split(/\s+/).map((w, i) =>
-    `<span class="letter" aria-hidden="true" style="animation-delay:${(2.1 + i * .35).toFixed(2)}s">${w}</span>`
-  ).join(' ');
 
   /* ───── Scroll reveals ───── */
   const io = new IntersectionObserver((entries) => {
@@ -895,95 +773,6 @@
     if (parts.length || ambient) requestAnimationFrame(frame); else { running = false; ctx.clearRect(0, 0, W, H); }
   }
 
-  /* ───── Music box (WebAudio, no files) ───── */
-  const music = {
-    ac: null, master: null, timer: null, on: false, step: 0, nextT: 0,
-    STEP: .3,
-    // 8 bars of 6 eighth-steps: [step, midi, velocity]
-    SCORE: (() => {
-      const bars = [
-        [53, [[0, 72], [2, 77], [4, 81]]],
-        [50, [[0, 81], [2, 79], [3, 77], [4, 74]]],
-        [46, [[0, 74], [2, 77], [4, 82]]],
-        [48, [[0, 81], [2, 79], [4, 76]]],
-        [53, [[0, 77], [2, 81], [4, 84]]],
-        [45, [[0, 84], [2, 81], [3, 79], [4, 76]]],
-        [46, [[0, 74], [2, 77], [3, 76], [4, 79]]],
-        [53, [[0, 77], [2, 72], [4, 69]]],
-      ];
-      const out = [];
-      bars.forEach(([bass, mel], b) => {
-        out.push([b * 6, bass, .13], [b * 6 + 3, bass + 7, .07]);
-        mel.forEach(([s, n]) => out.push([b * 6 + s, n, .2]));
-      });
-      return out;
-    })(),
-    init() {
-      const AC = window.AudioContext || window.webkitAudioContext;
-      if (!AC) return false;
-      const ac = this.ac = new AC();
-      this.master = ac.createGain(); this.master.gain.value = 0;
-      const verb = ac.createConvolver();
-      const len = ac.sampleRate * 2.6, ir = ac.createBuffer(2, len, ac.sampleRate);
-      for (let c = 0; c < 2; c++) { const d = ir.getChannelData(c); for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3); }
-      verb.buffer = ir;
-      const wet = ac.createGain(); wet.gain.value = .35;
-      this.master.connect(ac.destination);
-      this.master.connect(verb); verb.connect(wet); wet.connect(ac.destination);
-      return true;
-    },
-    note(midi, t, vel) {
-      const ac = this.ac, f = 440 * Math.pow(2, (midi - 69) / 12);
-      const env = ac.createGain();
-      env.gain.setValueAtTime(0, t);
-      env.gain.linearRampToValueAtTime(vel, t + .006);
-      env.gain.exponentialRampToValueAtTime(.0001, t + 2.4);
-      env.connect(this.master);
-      [[1, 1], [2.005, .28], [3.01, .07]].forEach(([mult, g]) => {
-        const o = ac.createOscillator(), og = ac.createGain();
-        o.type = 'sine'; o.frequency.value = f * mult; og.gain.value = g;
-        o.connect(og); og.connect(env);
-        o.start(t); o.stop(t + 2.5);
-      });
-    },
-    schedule() {
-      const ac = this.ac;
-      while (this.nextT < ac.currentTime + .25) {
-        const s = this.step % 48;
-        for (const [st, n, v] of this.SCORE) if (st === s) this.note(n, this.nextT, v);
-        this.step++; this.nextT += this.STEP;
-      }
-    },
-    start() {
-      if (!this.ac && !this.init()) return;
-      this.ac.resume();
-      this.nextT = this.ac.currentTime + .1;
-      clearInterval(this.timer);
-      this.timer = setInterval(() => this.schedule(), 80);
-      const g = this.master.gain, t = this.ac.currentTime;
-      g.cancelScheduledValues(t); g.setValueAtTime(g.value, t); g.linearRampToValueAtTime(.32, t + 3);
-      this.on = true;
-    },
-    stop() {
-      if (!this.ac) return;
-      const g = this.master.gain, t = this.ac.currentTime;
-      g.cancelScheduledValues(t); g.setValueAtTime(g.value, t); g.linearRampToValueAtTime(0, t + .6);
-      clearInterval(this.timer);
-      this.on = false;
-    },
-  };
-  const soundBtn = $('#sound');
-  function syncSound() {
-    soundBtn.classList.toggle('playing', music.on);
-    soundBtn.innerHTML = music.on ? '<i class="fa-solid fa-music"></i>' : '<i class="fa-solid fa-volume-xmark"></i>';
-    soundBtn.setAttribute('aria-label', music.on ? 'أوقِفِ الموسيقى' : 'شغِّلِ الموسيقى');
-  }
-  soundBtn.addEventListener('click', () => { music.on ? music.stop() : music.start(); syncSound(); });
-  document.addEventListener('visibilitychange', () => {
-    if (!music.ac) return;
-    if (document.hidden) music.ac.suspend(); else if (music.on) music.ac.resume();
-  });
-
   /* ───── Opening the envelope ───── */
   const splash = $('#splash'), stage = $('#stage');
   let opened = false;
@@ -1005,7 +794,6 @@
   function open() {
     if (opened) return;
     opened = true;
-    music.start(); syncSound();
     splash.classList.add('opening');
     setTimeout(sparkle, reduceMotion ? 0 : 420);
     setTimeout(() => {
